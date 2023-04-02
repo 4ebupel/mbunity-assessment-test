@@ -7,15 +7,16 @@ type Props = {
   to: string;
   text: string;
   white?: boolean;
-  responsive?: boolean;
+  adaptive?: boolean;
+  size?: string;
 }
 
-export const TextLink: FC<Props> = memo(({ to, text, white, responsive }) => {
+export const TextLink: FC<Props> = memo(({ to, text, white, adaptive, size }) => {
   return (
     <Link
       to={to}
-      className={cn('textLink', { 'textLink--responsive': responsive })}
-      style={white ? {color: '#fff'} : {color: '#000'}}
+      className={cn('textLink', { 'textLink--adaptive': adaptive })}
+      style={{color: white ? '#fff' : '#000', fontSize: size ? `${size}px` : ''}}
     >
       {text}
     </Link>

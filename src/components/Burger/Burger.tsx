@@ -3,6 +3,7 @@
 import "./Burger.scss";
 import cn from 'classnames';
 import { FC, memo } from "react";
+import { EmpyLinksList } from "../EmptyLinksList/EmptyLinksList";
 
 type Props = {
   isVisible: boolean;
@@ -15,27 +16,7 @@ export const Burger: FC<Props> = memo(({ isVisible }) => {
         <a href="#" className="burger__logo">Logo Here</a>
         <a href="#" className="burger__iconLink"></a>
       </div>
-      {/* All links are 'empty', because it's just a test */}
-      <ul className="list">
-        <li className="list__link">
-          <a href="#">Home</a>
-        </li>
-        <li className="list__link list__link--arrow">
-          <a href="#">Features</a>
-        </li>
-        <li className="list__link">
-          <a href="#">Blog</a>
-        </li>
-        <li className="list__link">
-          <a href="#">Shop</a>
-        </li>
-        <li className="list__link">
-          <a href="#">About</a>
-        </li>
-        <li className="list__link">
-          <a href="#">Contact</a>
-        </li>
-      </ul>
+      <EmpyLinksList names={['Home', 'Features', 'Blog', 'Shop', 'About' ,'Contact']} white size="14"/>
       <div className="burger__footer__container">
         <a href="#" className="burger__circe__link">
           <div className="burger__profile__inner"></div>

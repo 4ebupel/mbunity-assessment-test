@@ -16,23 +16,23 @@ export const Header: FC = memo(() => {
         <nav className="header__nav">
           <ul className="header__nav-ul">
             <li className="header__list__item">
-              <TextLink to="#" text="Home" responsive />
+              <TextLink to="#" text="Home" adaptive />
             </li>
             <li className="header__list__item">
-              <TextLink to="#" text="Features" responsive />
+              <TextLink to="#" text="Features" adaptive />
               <span className="header__link--arrow" />
             </li>
             <li className="header__list__item">
-              <TextLink to="#" text="Blog" responsive />
+              <TextLink to="#" text="Blog" adaptive />
             </li>
             <li className="header__list__item">
-              <TextLink to="#" text="Shop" responsive />
+              <TextLink to="#" text="Shop" adaptive />
             </li>
             <li className="header__list__item">
-              <TextLink to="#" text="About" responsive />
+              <TextLink to="#" text="About" adaptive />
             </li>
             <li className="header__list__item">
-              <TextLink to="#" text="Contact" responsive />
+              <TextLink to="#" text="Contact" adaptive />
             </li>
           </ul>
           <div className="header__icon__links__container">

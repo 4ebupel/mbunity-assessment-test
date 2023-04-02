@@ -34,7 +34,7 @@ export const Footer: FC = memo(() => {
                   Ordinary links here used for icons
                 */}
                 <TextLink 
-                  to="tel:+1012 3456 789" text="+1012 3456 789" white responsive />
+                  to="tel:+1012 3456 789" text="+1012 3456 789" white adaptive />
               </li>
               <li className="footer__list__item">
                 <a
@@ -44,7 +44,7 @@ export const Footer: FC = memo(() => {
                 <TextLink 
                   to="mailto:demo@gmail.com" 
                   text="demo@gmail.com" 
-                  white responsive 
+                  white adaptive 
                 />
               </li>
               <li className="footer__list__item">
@@ -76,7 +76,7 @@ export const Footer: FC = memo(() => {
                 ]
               } 
               white 
-              responsive 
+              adaptive 
             />
           </div>
         </div>
@@ -93,7 +93,7 @@ export const Footer: FC = memo(() => {
                 ]
               } 
               white 
-              responsive 
+              adaptive 
             />
           </div>
           <div className="footer__group">
@@ -107,7 +107,7 @@ export const Footer: FC = memo(() => {
                 ]
               } 
               white 
-              responsive 
+              adaptive 
             />
           </div>
         </div>

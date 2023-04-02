@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { FC, memo } from 'react';
 import './InfoBlock.scss';
+import { TextLink } from '../TextLink/TextLink';
 
 export const InfoBlock: FC = memo(() => {
   return (
@@ -21,7 +22,7 @@ export const InfoBlock: FC = memo(() => {
             infoBlock__icon__link--phone
           "
           ></a>
-          <a href="#" className="infoBlock__link">+1012 3456 789</a>
+          <TextLink to='tel:+1012 3456 789' text='+1012 3456 789' white adaptive/>
         </li>
         <li className="infoBlock__list__item">
           <a
@@ -31,7 +32,7 @@ export const InfoBlock: FC = memo(() => {
             infoBlock__icon__link--mail
           "
           ></a>
-          <a href="#" className="infoBlock__link">demo@gmail.com</a>
+          <TextLink to='mailto:demo@gmail.com' text='demo@gmail.com' white adaptive/>
         </li>
         <li className="infoBlock__list__item">
           <a
