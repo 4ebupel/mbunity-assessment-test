@@ -1,0 +1,135 @@
+@import '../../utils/styles/mixins';
+@import '../../utils/styles/extends';
+
+.header {
+  // I didn't have a logo so I just used big text
+  &__logo {
+    font-family: 'Inter';
+    font-weight: 800;
+    font-size: 18px;
+    color: #000;
+
+    @include onDesktop {
+      font-size: 24px;
+    }
+  }
+
+  &__icon__link {
+    &--profile {
+      transition: background-image 0.3s ease-in-out;
+
+      width: 16px;
+      height: 19px;
+      background-image: url(../../svg/profileBlack.svg);
+    }
+
+    &--cart {
+      transition: background-image 0.3s ease-in-out;
+
+      width: 16px;
+      height: 16px;
+      background-image: url(../../svg/cartBlack.svg);
+    }
+
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 32px;
+      width: 32px;
+      
+      border: solid 1px #000;
+      border-radius: 50%;
+
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #000;
+      }
+
+      &:hover .header__icon__link--profile {
+        background-image: url(../../svg/profile.svg);
+      }
+      &:hover .header__icon__link--cart {
+        background-image: url(../../svg/cart.svg);
+      }
+    }
+  }
+
+  &__icon__links__container {
+    display: flex;
+    gap: 36px;
+  }
+
+  &__link {
+    display: inline-block;
+
+    transition: color 0.3s, transform 0.3s ease-in-out;
+
+    &:hover {
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    &:focus {
+      transform: scale(1.2);
+    }
+
+    @extend %Link;
+
+    &--arrow {
+      &::after {
+        content: url(../../svg/arrowBlack.svg);
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+      gap: 60px;
+    }
+
+    &-ul {
+      @include onDesktop {
+        display: flex;
+        gap: 47px;
+        align-items: center;
+      }
+    }
+
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    padding: 28px 20px;
+    box-shadow: 0px -2px 4px 0px #00000040;
+
+    @include onDesktop {
+      height: 112px;
+
+      padding: 40px 100px;
+    }
+  }
+
+  &__iconLink {
+    width: 18px;
+    height: 18px;
+    background-image: url(../../svg/menu.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+}

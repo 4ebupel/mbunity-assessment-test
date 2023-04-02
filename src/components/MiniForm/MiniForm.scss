@@ -1,0 +1,72 @@
+@import '../../utils/styles/extends';
+@import '../../utils/styles/mixins';
+
+.miniForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+
+  background-color: #0D0D0D;
+
+  border-radius: 5px;
+
+  padding: 17px 14px 14px 14px;
+
+  @include onDesktop {
+    height: fit-content;
+  }
+
+
+  &__heading {
+    @extend %H2Text
+  }
+
+  &__input {
+    height: 40px;
+    width: 60%;
+
+    padding: 11px;
+
+    @extend %H4Text;
+    font-family: 'Poppins';
+    border-radius: 4px 0 0 4px;
+    color: #fff;
+
+    background-color: #1A1A1A;
+    border: 2px solid transparent;
+
+    transition: border-color 0.3s ease-in-out;
+
+    &:focus {
+      border: 2px solid #000;
+    }
+  }
+
+  &__btn {
+    height: 40px;
+    width: 40%;
+    padding: 10px 20px;
+
+    @extend %H3Text;
+    color: #fff;
+    text-align: center;
+
+    background-color: #000;
+
+    border-radius: 0 4px 4px 0;
+
+    transition: transform 0.3s, border-radius 0.3s ease-in-out;
+
+    &:focus, &:hover {
+      transform: scale(1.03);
+      border-radius: 4px
+    }
+  }
+
+  &__text {
+    @extend %H3Text;
+    color: #FFFFFF;
+    opacity: 0.5;
+  }
+}

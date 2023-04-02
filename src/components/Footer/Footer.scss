@@ -1,0 +1,138 @@
+@import "../../utils/styles/mixins";
+@import "../../utils/styles/extends";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  padding: 20px 20px 35px 20px;
+
+  background-color: #000;
+
+  @include onDesktop {
+    padding: 80px 80px 66px 80px;
+  }
+
+  &__onDesktop {
+    @include onDesktop {
+      display: flex;
+
+      justify-content: space-between;
+    }
+  }
+
+  &__list__item {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      gap: 28px;
+    }
+  }
+
+  &__icon {
+    display: block;
+    height: 19px;
+    width: 19px;
+
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &-phone {
+      background-image: url(../../svg/phone.svg);
+    }
+
+    &-mail {
+      height: 16px;
+      width: 20px;
+      background-image: url(../../svg/mail.svg);
+    }
+
+    &-geo {
+      height: 21px;
+      width: 16.5px;
+      background-image: url(../../svg/geo.svg);
+    }
+  }
+
+  &__logo {
+    font-family: "Inter";
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 43px;
+
+    &__conatainer {
+      padding: 0 70px 20px 70px;
+
+      text-align: center;
+
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+  &__link {
+    display: block;
+    @extend %H4Text;
+
+    border-bottom: 1px solid transparent;
+
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include onDesktop {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__group__container {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+
+    @include onDesktop {
+      display: contents;
+    }
+  }
+
+  &__group__heading {
+    @extend %H2Text;
+    font-size: 18px;
+  }
+}
+
+.reach-us {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  @include onDesktop {
+    gap: 20px;
+  }
+}

@@ -1,0 +1,199 @@
+@import "../../utils/styles/extends";
+@import "../../utils/styles/mixins";
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 40%;
+
+  padding: 15px 20px 25px;
+
+  background-color: #000;
+
+  border-radius: 5px;
+
+  @include onDesktop {
+    justify-content: space-between;
+    align-items: flex-start;
+    width: fit-content;
+    height: 100%;
+
+    padding: 40px;
+
+    border-radius: 10px;
+  }
+
+  &__heading {
+    @extend %H2Text;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    margin-bottom: 5px;
+
+    @include onDesktop {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 42px;
+    }
+  }
+
+  &__link {
+    @extend %H4Text;
+
+    @include onDesktop {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+
+  &__icon__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+
+    &--phone {
+      height: 19px;
+      width: 19px;
+      background-image: url(../../svg/phone.svg);
+    }
+
+    &--mail {
+      width: 20px;
+      height: 16px;
+      background-image: url(../../svg/mail.svg);
+    }
+
+    &--geo {
+      width: 16.5px;
+      height: 21px;
+      background-image: url(../../svg/geo.svg);
+    }
+  }
+
+  &__text {
+    @extend %H4Text;
+
+    color: #c9c9c9;
+
+    margin-bottom: 13px;
+
+    @include onDesktop {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    margin-bottom: 60px;
+
+    @include onDesktop {
+      align-items: flex-start;
+      gap: 50px;
+
+      margin-bottom: 0;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      gap: 10px;
+
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      @include onDesktop {
+        flex-direction: row;
+        gap: 25px;
+      }
+    }
+  }
+
+  &__icons__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 24px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+
+    border-radius: 50%;
+
+    background-color: #262626;
+
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    // I tried to make an svg sprite but as you can see
+    // haven't reach success, so I came up with this idea
+
+    &:hover .infoBlock__icon--twitter {
+      background-image: url(../../svg/TwitterBlack.svg);
+    }
+
+    &:hover .infoBlock__icon--instagram {
+      background-image: url(../../svg/InstagramBlack.svg);
+    }
+
+    &:hover .infoBlock__icon--discord {
+      background-image: url(../../svg/DiscordBlack.svg);
+    }
+
+    &--twitter {
+      height: 12px;
+      width: 15px;
+
+      transition: background-image 0.3s ease-in-out;
+
+      background-image: url(../../svg/Twitter.svg);
+    }
+
+    &--instagram {
+      width: 15px;
+      height: 15px;
+
+      transition: background-image 0.3s ease-in-out;
+
+      background-image: url(../../svg/Instagram.svg);
+    }
+
+    &--discord {
+      width: 15px;
+      height: 10px;
+
+      transition: background-image 0.3s ease-in-out;
+
+      background-image: url(../../svg/Discord.svg);
+    }
+  }
+}
