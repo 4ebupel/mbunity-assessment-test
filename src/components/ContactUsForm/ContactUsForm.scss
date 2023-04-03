@@ -56,6 +56,15 @@
       width: 280px;
     }
 
+    &--error {
+      @extend %H4Text;
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+
+      color: red;
+    }
+
     &__label {
       @extend %H3Text;
       line-height: 20px;
@@ -76,6 +85,7 @@
     }
 
     &__container {
+      position: relative;
       display: flex;
       flex-direction: column;
     }
