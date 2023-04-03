@@ -17,8 +17,6 @@ interface FormData {
 
 export const ContactUsForm: FC = memo(() => {
   // Just to clear form on submit
-  // I guess in real project this method will create obj
-  // from all the states together and send post request to the server
 
   const handleSubmit = (
     formData: FormData,
