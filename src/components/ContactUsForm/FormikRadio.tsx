@@ -6,6 +6,7 @@ type Props = {
   name: string;
   value: string;
   label?: string;
+  // rest param in case you want add some vinilla properties
   rest?: React.DetailedHTMLProps<
     React.InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
@@ -14,6 +15,8 @@ type Props = {
 
 export const FormikRadio: FC<Props> = ({ name, label, value, ...rest }) => {
   return (
+    // name property used to make Formik take
+    // all the complicated stuff in its own hands
     <Field name={name} type="radio" value={value}>
       {({ field }: FieldProps) => {
         return (

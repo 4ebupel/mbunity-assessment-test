@@ -47,6 +47,7 @@ export const ContactUsForm: FC = memo(() => {
           <Form className="contactUsForm" >
             {/* All __align__container classes used for aligning elements on mobile mostly */}
             <div className="contactUsForm__input__align__container">
+              {/* Custom components to make code shorter */}
               <FormikInput name="firstName" label="First Name" />
 
               <FormikInput name="lastName" label="Last Name" />

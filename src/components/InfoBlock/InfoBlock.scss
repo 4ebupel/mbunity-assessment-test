@@ -56,23 +56,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 24px;
-    width: 24px;
 
     &--phone {
+      min-width: 19px;
       height: 19px;
-      width: 19px;
       background-image: url(../../svg/phone.svg);
     }
 
     &--mail {
-      width: 20px;
+      min-width: 20px;
       height: 16px;
       background-image: url(../../svg/mail.svg);
     }
 
     &--geo {
-      width: 16.5px;
+      min-width: 16.5px;
       height: 21px;
       background-image: url(../../svg/geo.svg);
     }
@@ -114,6 +112,10 @@
       align-items: center;
       justify-content: center;
 
+      text-align: center;
+
+      max-width: 200px;
+
       gap: 10px;
 
       transition: transform 0.3s ease-in-out;
@@ -123,8 +125,11 @@
       }
 
       @include onDesktop {
+        text-align: start;
         flex-direction: row;
         gap: 25px;
+
+        max-width: 300px;
       }
     }
   }

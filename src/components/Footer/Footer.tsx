@@ -33,18 +33,23 @@ export const Footer: FC = memo(() => {
                 {/* 
                   Ordinary links here used for icons
                 */}
-                <TextLink 
-                  to="tel:+1012 3456 789" text="+1012 3456 789" white adaptive />
+                <TextLink
+                  to="tel:+1012 3456 789"
+                  text="+1012 3456 789"
+                  white
+                  adaptive
+                />
               </li>
               <li className="footer__list__item">
                 <a
                   href="mailto:demo@gmail.com"
                   className="footer__icon footer__icon-mail"
                 ></a>
-                <TextLink 
-                  to="mailto:demo@gmail.com" 
-                  text="demo@gmail.com" 
-                  white adaptive 
+                <TextLink
+                  to="mailto:demo@gmail.com"
+                  text="demo@gmail.com"
+                  white
+                  adaptive
                 />
               </li>
               <li className="footer__list__item">
@@ -52,62 +57,44 @@ export const Footer: FC = memo(() => {
                   href="https://goo.gl/maps/oD4H5WuzsGLrWrJo6"
                   className="footer__icon footer__icon-geo"
                 ></a>
-                <a
-                  href="https://goo.gl/maps/oD4H5WuzsGLrWrJo6"
-                  className="footer__link"
-                >
-                  132 Dartmouth Street
-                  <br />
-                  Boston, Massachusetts
-                  <br />
-                  02156 United States
-                </a>
+                <TextLink
+                  to="https://goo.gl/maps/oD4H5WuzsGLrWrJo6"
+                  text="132 Dartmouth Street Boston, Massachusetts 02156 United States"
+                  white
+                  adaptive
+                />
               </li>
             </ul>
           </div>
           <div className="footer__group company">
             <h2 className="footer__group__heading">Company</h2>
-            <EmpyLinksList 
-              names={
-                [
-                  'About', 
-                  'Contact', 
-                  'Blogs'
-                ]
-              } 
-              white 
-              adaptive 
+            <EmpyLinksList
+              names={["About", "Contact", "Blogs"]}
+              white
+              adaptive
             />
           </div>
         </div>
         <div className="footer__group__container">
           <div className="footer__group">
             <h2 className="footer__group__heading">Legal</h2>
-            <EmpyLinksList 
-              names={
-                [
-                  'Privacy Policy', 
-                  'Terms & Services', 
-                  'Terms of Use', 
-                  'Refund Policy'
-                ]
-              } 
-              white 
-              adaptive 
+            <EmpyLinksList
+              names={[
+                "Privacy Policy",
+                "Terms & Services",
+                "Terms of Use",
+                "Refund Policy",
+              ]}
+              white
+              adaptive
             />
           </div>
           <div className="footer__group">
             <h2 className="footer__group__heading">Quick Links</h2>
-            <EmpyLinksList 
-              names={
-                [
-                  'Techlabz Keybox', 
-                  'Downloads', 
-                  'Forum'
-                ]
-              } 
-              white 
-              adaptive 
+            <EmpyLinksList
+              names={["Techlabz Keybox", "Downloads", "Forum"]}
+              white
+              adaptive
             />
           </div>
         </div>
@@ -115,4 +102,4 @@ export const Footer: FC = memo(() => {
       </div>
     </footer>
   );
-})
+});

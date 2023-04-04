@@ -7,6 +7,7 @@ type Props = {
   placeHolder?: string;
   maxLength?: number;
   label?: string;
+  // rest param in case you want add some vinilla properties
   rest?: React.DetailedHTMLProps<
     React.InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
@@ -20,6 +21,8 @@ export const FormikTextArea: FC<Props> = ({
   maxLength,
   ...rest
 }) => {
+  // name property used to make Formik take
+  // all the complicated stuff in its own hands
   return (
     <Field name={name}>
       {({ field, meta }: FieldProps) => {
@@ -28,6 +31,8 @@ export const FormikTextArea: FC<Props> = ({
             <label
               htmlFor="message"
               className="contactUsForm__input__label"
+              // inline style to make label black
+              // even without focus if it has smth inside
               style={meta.value ? { color: "#000" } : {}}
             >
               {label}
