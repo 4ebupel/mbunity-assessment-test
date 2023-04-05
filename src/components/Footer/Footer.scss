@@ -27,13 +27,7 @@
     flex-direction: column;
     gap: 13px;
 
-    transition: transform 0.3s ease-in-out;
-
     max-width: 140px;
-
-    &:hover {
-      transform: scale(1.1);
-    }
 
     @include onDesktop {
       flex-direction: row;
@@ -86,28 +80,6 @@
       text-align: center;
 
       border-bottom: 1px solid #fff;
-    }
-  }
-
-  &__link {
-    display: block;
-    @extend %H4Text;
-
-    border-bottom: 1px solid transparent;
-
-    transition: transform 0.3s ease-in-out;
-
-    // max-width: 140px;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-
-    @include onDesktop {
-      font-size: 16px;
-      line-height: 24px;
-
-      // max-width: 190px;
     }
   }
 

@@ -50,6 +50,7 @@ export const Footer: FC = memo(() => {
                   text="demo@gmail.com"
                   white
                   adaptive
+                  blank
                 />
               </li>
               <li className="footer__list__item">
@@ -62,6 +63,7 @@ export const Footer: FC = memo(() => {
                   text="132 Dartmouth Street Boston, Massachusetts 02156 United States"
                   white
                   adaptive
+                  blank
                 />
               </li>
             </ul>

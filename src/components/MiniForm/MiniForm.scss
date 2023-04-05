@@ -56,11 +56,10 @@
 
     border-radius: 0 4px 4px 0;
 
-    transition: transform 0.3s, border-radius 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 
     &:focus, &:hover {
-      transform: scale(1.03);
-      border-radius: 4px
+      background-color: #8d8d8d;
     }
   }
 

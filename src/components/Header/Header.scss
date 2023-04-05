@@ -1,10 +1,10 @@
-@import '../../utils/styles/mixins';
-@import '../../utils/styles/extends';
+@import "../../utils/styles/mixins";
+@import "../../utils/styles/extends";
 
 .header {
   // I didn't have a logo so I just used big text
   &__logo {
-    font-family: 'Inter';
+    font-family: "Inter";
     font-weight: 800;
     font-size: 18px;
     color: #000;
@@ -16,7 +16,7 @@
 
   &__icon__link {
     &--profile {
-      transition: background-image 0.3s ease-in-out;
+      transition: background-image 0.2s ease-in-out;
 
       width: 16px;
       height: 19px;
@@ -24,7 +24,7 @@
     }
 
     &--cart {
-      transition: background-image 0.3s ease-in-out;
+      transition: background-image 0.2s ease-in-out;
 
       width: 16px;
       height: 16px;
@@ -38,11 +38,11 @@
 
       height: 32px;
       width: 32px;
-      
+
       border: solid 1px #000;
       border-radius: 50%;
 
-      transition: background-color 0.3s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
 
       &:hover {
         background-color: #000;
@@ -62,27 +62,10 @@
     gap: 36px;
   }
 
-  &__link {
-    display: inline-block;
-
-    transition: color 0.3s, transform 0.3s ease-in-out;
-
-    &:hover {
-      color: #000;
-      transform: scale(1.1);
-    }
-
-    &:focus {
-      transform: scale(1.2);
-    }
-
-    @extend %Link;
-
-    &--arrow {
-      &::after {
-        content: url(../../svg/arrowBlack.svg);
-        margin-left: 10px;
-      }
+  &__link--arrow {
+    &::after {
+      content: url(../../svg/arrowBlack.svg);
+      margin-left: 10px;
     }
   }
 
@@ -101,7 +84,6 @@
         align-items: center;
       }
     }
-
   }
 
   &__container {

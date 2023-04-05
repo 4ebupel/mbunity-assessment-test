@@ -9,14 +9,20 @@ type Props = {
   white?: boolean;
   adaptive?: boolean;
   size?: string;
+  blank?: boolean;
 }
 
-export const TextLink: FC<Props> = memo(({ to, text, white, adaptive, size }) => {
+export const TextLink: FC<Props> = memo(({ to, text, white, adaptive, size, blank }) => {
   return (
     <Link
       to={to}
-      className={cn('textLink', { 'textLink--adaptive': adaptive })}
-      style={{color: white ? '#fff' : '#000', fontSize: size ? `${size}px` : ''}}
+      className={cn(
+        'textLink', 
+        { 'textLink--adaptive': adaptive }, 
+        { 'textLink--white': white }
+        )}
+      style={{fontSize: size ? `${size}px` : ''}}
+      target={blank ? '_blank' : '_self'}
     >
       {text}
     </Link>

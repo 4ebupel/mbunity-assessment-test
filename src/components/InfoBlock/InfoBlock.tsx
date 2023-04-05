@@ -40,6 +40,7 @@ export const InfoBlock: FC = memo(() => {
             text="demo@gmail.com"
             white
             adaptive
+            blank
           />
         </li>
         <li className="infoBlock__list__item">
@@ -57,6 +58,7 @@ export const InfoBlock: FC = memo(() => {
             "
             white
             adaptive
+            blank
           />
         </li>
       </ul>
